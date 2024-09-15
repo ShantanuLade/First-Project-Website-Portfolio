@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+       /* General Styles */
+       body {
+        font-family: 'Times New Roman';
+        background-color: grey ;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        overflow-x: hidden;
+      }
+
+      .heading {
+        font-size: 3em;
+        margin-top: 50px;
+        color: #2c3e50;
+        position: relative;
+        animation: fadeInZoom 1.5s ease-in-out;
+      }
+
+      .nav-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 20px 0 40px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        animation: slideInFromLeft 1.2s ease-in-out;
+      }
+
+      .nav-list li {
+        font-size: 1.5em;
+        position: relative;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .nav-list li a {
+        text-decoration: none;
+        color: #2980b9;
+        transition: color 0.3s ease;
+      }
+
+      .nav-list li:hover a {
+        color: #e74c3c;
+      }
+
+      .nav-list li:hover {
+        transform: translateY(-5px);
+        color: #e74c3c;
+      }
+
+      .nav-list li:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        background-color: #e74c3c;
+        bottom: -5px;
+        left: 0;
+        transition: width 0.3s ease-in-out;
+      }
+
+      .nav-list li:hover:before {
+        width: 100%;
+      }
+
+      .portfolio-image {
+        width: 80%;
+        max-width: 600px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        margin-top: 30px;
+        animation: fadeInUp 1.5s ease-in-out;
+      }
+
+      /* Keyframes for Animations */
+      @keyframes fadeInZoom {
+        0% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes slideInFromLeft {
+        0% {
+          opacity: 0;
+          transform: translateX(-100%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-30px);
+        }
+        60% {
+          transform: translateY(-15px);
+        }
+      }
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+/* Main section styling */
+.home {
+  font-size: 2.5rem;
+  margin: 2rem auto;
+  text-align: center;
+  color: #4a3c2e; /* Dark brown text */
+  background-color: #F5F5DC; /* Light gray background */
+ 
+  border-radius: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  
+  font-family: 'Times New Roman', Times, serif;
+  animation: popIn 1s ease-in-out;
+}
+
+/* Introduction section styling */
+.intro-section {
+  background-color: #4a3c2e; /* Dark brown text */
+
+ 
+  background-color:  #e0e0e0; /* Light gray background */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+  max-width: 800px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Heading styling */
+.intro-head {
+  
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #6f4e28; /* Medium brown text */
+  text-align: center;
+  font-family: 'Cinzel', serif; /* Vintage serif font */
+}
+
+/* Paragraph styling */
+.intro-text {
+
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #5a3e2b; /* Slightly darker brown text */
+  text-align: justify;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Keyframes for animations */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+  /* Main section styling */
+.description-section {
+  background-color: #007bff; /* Vibrant blue background */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+  max-width: 800px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading styling */
+.description-head {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #ffffff; /* White text for contrast */
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  animation: bounceIn 1s ease-in-out;
+}
+
+/* Paragraph styling */
+.description-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0; /* Light gray text for contrast */
+  text-align: justify;
+  font-family: 'Times New Roman', Times, serif
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+/* Vibrant and Bold Theme */
+.education-section.vibrant {
+  background-color: #ff6f61; /* Bold background color */
+  padding:30px 20px;
+  text-align: center;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 35px;
+}
+
+h1.ABOUT {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.5em;
+  color:#ff6f61;
+  text-align: center;
+  margin: 40px 0;
+  animation: fadeIn 1.5s ease-out;
+}
+
+h2.edu {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 20px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+ul.edu-list {
+  font-family: 'Times New Roman', Times, serif;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.edu-list li {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #ffab91; /* Light coral background */
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+ul.edu-list li:hover {
+  font-family: 'Times New Roman', Times, serif;
+  transform: scale(1.05);
+  background-color: #ff8a65; /* Slightly darker coral on hover */
+}
+/*--------------------------------------------------------------------------------------------*/
+/* Main section styling */
+.skills-container{
+background-color: white;
+
+}
+.skills-section {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f5f5f5; /* Light background color for better readability */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 800px;
+  animation: fadeIn 1s ease-in;
+  margin-top: 10px;
+}
+
+.skills-head {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.skill-list {
+  font-family: 'Times New Roman', Times, serif;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-item {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.soft-skills-heading {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.soft-skills {
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.highlight {
+  font-family: 'Times New Roman', Times, serif;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+.progress-contain{
+  background-color: white;
+}
+ #skills {
+  font-family: 'Times New Roman', Times, serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+
+}
+
+.states {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.skill {
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 15px;
+}
+
+.skill p {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.progress {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progress-bar {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+/* Experience Section Styles */
+.exp-contaniner{
+  padding-top: 20px;
+  background-color:rgb(155, 96, 179);
+  padding-bottom: 20px;
+}
+.experience-section {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #b7abb8; /* Keeping the background consistent */
+  color: #ffffff;
+}
+
+.exp {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  position: relative;
+  animation: fadeInLeft 1s ease-in-out;
+  color: white;
+}
+
+.exp2 {
+  display: flex;
+  justify-content: center;
+  animation: fadeInRight 1s ease-in-out;
+  color: white;
+}
+
+.exp2 ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+
+.exp2 li {
+  margin-bottom: 15px;
+  background-color: rgb(200, 150, 220); /* Different but complementary background color */
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.exp2 li:hover {
+  transform: translateY(-5px);
+  background-color: rgb(170, 137, 203); /* Matches with Achievements section hover */
+}
+
+/* Adjusting the date styling */
+.exp2 .date {
+  font-style: italic;
+  color: #555;
+  margin-left: 10px;
+  color: white;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+      /* General Styles */
+      body {
+        font-family: 'Times New Roman', Times, serif;
+        background-color: #f4f4f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      .achievements-section {
+        font-family: 'Times New Roman', Times, serif;
+        padding: 60px 0;
+        text-align: center;
+        background-color: #1abc9c;
+        color: #ecf0f1;
+        overflow: hidden;
+      }
+
+      .achieve-title {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2.8em;
+        margin-bottom: 40px;
+        position: relative;
+        animation: fadeInZoom 1.2s ease-in-out;
+      }
+
+      .achieve-container {
+        font-family: 'Times New Roman', Times, serif;
+        display: flex;
+        justify-content: center;
+        animation: slideUp 1.2s ease-in-out;
+      }
+
+      .achieve-list {
+        font-family: 'Times New Roman', Times, serif;
+        list-style-type: none;
+        padding: 0;
+        font-size: 1.3em;
+        line-height: 1.8;
+        width: 80%;
+        animation: fadeInSlide 1.5s ease-in-out;
+      }
+
+      .achieve-list li {
+        font-family: 'Times New Roman', Times, serif;
+        margin-bottom: 20px;
+        background-color: #16a085;
+        padding: 15px 5px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.4s ease-in-out,
+          background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .achieve-list li:before {
+        font-family: 'Times New Roman', Times, serif;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease-in-out;
+        z-index: 1;
+      }
+
+      .achieve-list li:hover:before {
+        font-family: 'Times New Roman', Times, serif;
+        transform: scaleX(1);
+        transform-origin: right;
+      }
+
+      .achieve-list li:hover {
+        font-family: 'Times New Roman', Times, serif;
+        transform: translateY(-10px) scale(1.03);
+        background-color: #149174;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      .achieve-list li:hover .achieve-list li:before {
+        font-family: 'Times New Roman', Times, serif;
+        transform: scaleX(1);
+      }
+
+      .achieve-list li:hover p {
+        font-family: 'Times New Roman', Times, serif;
+        color: #ecf0f1;
+      }
+
+      /* Keyframes for animations */
+      @keyframes fadeInZoom {
+        0% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes slideUp {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInSlide {
+        0% {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      /*----------------------------------------------------------------------------------------------------------------------*/
+  /* General Styles */
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.projects-section {
+  font-family: 'Times New Roman', Times, serif;
+    padding: 50px 0;
+    text-align: center;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+    position: relative;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.projects-container {
+  font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.project-card {
+  font-family: 'Times New Roman', Times, serif;
+    background-color: #34495e;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.project-card:hover {
+  font-family: 'Times New Roman', Times, serif;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.project-info {
+  font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+    text-align: left;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+}
+
+.project-link {
+  font-family: 'Times New Roman', Times, serif;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ecf0f1;
+    background-color: #e74c3c;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-link:hover {
+  font-family: 'Times New Roman', Times, serif;
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Keyframes for animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+     
+/* General settings for the certificate links section */
+.Certificate2 {
+  font-family: 'Times New Roman', Times, serif;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.Certificate {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Card style for each link */
+.Certificate2 div a {
+  font-family: 'Times New Roman', Times, serif;
+  display: block;
+  padding: 15px;
+  margin: 5px 0;
+  background-color: #ffffff;
+  color: #34495e;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Hover effect with glow and lift */
+.Certificate2 div a:hover {
+  font-family: 'Times New Roman', Times, serif;
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 123, 230, 0.4);
+  background-color: #0073e6;
+  color: #ffffff;
+}
+
+/* Keyframe animation for sliding in from the left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply the animation to the certificate links */
+.Certificate2 div {
+  font-family: 'Times New Roman', Times, serif;
+  animation: slideInLeft 0.5s ease-out;
+}
+
+/* Add additional styling to improve the section's overall look */
+.Certificate2 div {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f8f9fa;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.Certificate2 div a {
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #e9ecef;
+}
+
+h2.Contact {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  color: #007BFF;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.namebox, .emailbox, .messagebox {
+  font-family: 'Times New Roman', Times, serif;
+  display: block;
+  margin: 10px auto;
+  padding: 15px;
+  width: 75%;
+  max-width: 380px;
+  border: 1px solid #007BFF;
+  border-radius: 5px;
+  font-size: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.sendbutton {
+  font-family: 'Times New Roman', Times, serif;
+  display: block;
+  margin: 20px auto;
+  padding: 15px 30px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+/* Style for the Jump to Top button */
+.jump-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Hidden by default */
+    width: 50px;
+    height: 50px;
+    background-color: #333; /* Button background color */
+    color: #fff; /* Arrow color */
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    border-radius: 50%; /* Circular button */
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow */
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.jump-to-top:hover {
+    background-color: #555; /* Change color on hover */
+}
+
+/* Show button when scrolled down */
+.show {
+    display: block;
+    opacity: 0.8; /* Slight transparency */
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.connect {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  font-size: 18px;
+  margin: 20px 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.connect a {
+  font-family: 'Times New Roman', Times, serif;
+  color: #0077b5;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.connect a:hover {
+  font-family: 'Times New Roman', Times, serif;
+  color: #005582;
+  text-decoration: underline;
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+body { font-family: 'Times New Roman', Times, serif; margin: 0; padding: 0; background-color: #e0e0e0; }
+.social-media.gradient { text-align: center; padding: 2rem; background: linear-gradient(135deg, #ff9a9e, #fad0c4); border-radius: 0px; }
+.social-media.gradient h2 { margin-bottom: 1.5rem; color: #fff; font-size: 2rem; }
+.social-icons { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 1.2rem; }
+.social-icons li { display: inline; }
+.social-icons a { display: inline-block; width: 40px; height: 40px; transition: transform 0.3s, box-shadow 0.3s; border-radius: 50%; overflow: hidden; background-color: #fff; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); }
+.social-icons a img { width: 100%; height: 100%; }
+.social-icons a:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); }
+/*----------------------------------------------------------------------------------------------------------------------*/
+footer {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  margin-top: 0px;
+  padding: 10px 0;
+  background-color: #c14c4c;
+  color: #fff;
+  animation: slideInUp 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+    </style>
+  </head>
+  <body class="background">
+    <h1 class="heading">PERSONAL PORTFOLIO PAGE</h1>
+    <ul class="nav-list">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <img
+      src="/collage.jpeg"
+      alt="collage image"
+      class="portfolio-image"
+    />
+    <h1 class="home">Home:</h1>
+    <section class="intro-section">
+      <h2 class="intro-head">Introduction:</h2>
+      <p class="intro-text">
+        Hello! My name is Shantanu Lade, and I am excited to share this website
+        that I have built using HTML and CSS. This site serves as a comprehensive
+        resume and information platform where you can learn more about my
+        background, skills, and experiences. Whether you are a potential employer,
+        collaborator, or simply interested in my journey, I hope this site
+        provides you with a clear and engaging overview of who I am and what I can
+        offer. Thank you for visiting, and feel free to reach out if you have any
+        questions or opportunities to discuss!
+      </p>
+    </section>
+    
+    <section class="description-section">
+      <h2 class="description-head">Brief Description:</h2>
+      <p class="description-text">
+        Hello, My name is Shantanu Lade, and I am a recent graduate with a degree
+        in Pharmacy. With a strong foundation in pharmaceutical sciences and
+        hands-on experience gained through internships and practical training, I
+        am eager to start my professional journey in the field of pharmacy. During
+        my academic career, I have developed a solid understanding of medication
+        management, pharmacology, and patient care. My coursework and training
+        have equipped me with the knowledge and skills necessary to ensure the
+        safe and effective use of medications, provide patient education, and
+        collaborate with healthcare professionals. I am highly motivated,
+        detail-oriented, and committed to improving patient health and wellness.
+        As a fresher, I am excited about the opportunity to apply my knowledge,
+        learn from experienced professionals, and contribute to the success of a
+        dynamic healthcare team.
+      </p>
+    </section>
+    
+    <h1 class="ABOUT">About:</h1>
+    <section class="education-section vibrant">
+      <h2 class="edu">Education:</h2>
+      <ul class="edu-list">
+        <li>Bachelor of Science in Pharmaceutical Sciences, MGV’s Pharmacy College (SPPU Pune University), Nashik, 2024, GPA- 8.0</li>
+        <li>HSC, KSKW Science, Commerce and Arts College, Nashik, 2019, Percentage-68%</li>
+        <li>SSC, Silver Oak High School, Nashik, 2017, Percentage-80.50%</li>
+      </ul>
+    </section>
+    <section id="skills" class="skills-section">
+      <div class="skills-container">
+        <h2 class="skills-head">Skills:</h2>
+        <ul class="skill-list">
+          <li class="skill-item">
+            Proficient in using <strong class="highlight">AI tools</strong> such as Gamma App, Merlin Chrome Extension, Formula Dog, ChatGPT, etc.
+          </li>
+          <li class="skill-item">
+            Skilled in utilizing advanced <strong class="highlight">Genetic Engineering Tools</strong> such as Oligo Analyzer, Takara Primer Design Tool, and Eurofins Genomics services for designing and analyzing oligonucleotides and primers, ensuring accuracy and efficiency in genetic research and applications.
+          </li>
+          <li class="skill-item">
+            Experienced with <strong class="highlight">Protox 2</strong> for toxicity prediction and <strong class="highlight">SwissADME</strong> for evaluating the pharmacokinetic properties of small molecules, ensuring accuracy and efficiency in genetic research and drug development.
+          </li>
+          <li class="skill-item">
+            Competent in HTML and CSS, with hands-on experience in creating and designing websites. Successfully built a personal website to showcase my resume and portfolio, demonstrating my ability to effectively communicate my professional background and skills through a visually appealing and user-friendly interface.
+          </li>
+          <li class="soft-skills-heading">Soft Skills:</li>
+          <ul class="soft-skills">
+            <li>Strong Communication: Clear and effective in both writing and verbal communication.</li>
+            <li>Problem-Solving: Skilled at identifying issues and implementing effective solutions.</li>
+            <li>Teamwork: Effective collaborator in team environments.</li>
+            <li>Time Management: Organized and efficient in managing multiple tasks and deadlines.</li>
+          </ul>
+        </ul>
+      </div>
+    </section>
+
+    <div class="progress-contain">
+    <section id="skills">
+      <h2 class="states">Skills Statistics:</h2>
+      <div class="skill">
+        <p>Genetic Engineering Tools</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 70%;">70%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>Web Development</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 50%;">50%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>Strong Communication</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 80%;">80%</div>
+        </div>
+      </div>
+    </section>
+  </div>
+    <br>
+
+    <section>
+      <div class="exp-contaniner">
+        <h2 class="exp">Experience:</h2>
+        <div class="exp2">
+          <ul>
+            <li>
+              <strong>Intern (Industrial Training)</strong>, Koral Pharma, Satpur MIDC, Nashik 
+              <span class="date">20/06/23 - 20/07/23</span>
+            </li>
+            <li>
+              Collaborated with pharmacists and investigators to support ongoing studies. This involved tasks such as dispensing investigational drugs, and maintaining study documentation.
+            </li>
+            <li>
+              <strong>Genetic Engineering Internships</strong> and training program organized by Skilldunia.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <section class="achievements-section">
+      <h2 class="achieve-title">Achievements:</h2>
+      <div class="achieve-container">
+        <ul class="achieve-list">
+          <li>
+            Published a review article in the International Journal of Novel
+            Research and Development along with certification.
+          </li>
+          <li>Completed a research article.</li>
+          <li>Presentation Skills Certification, 2023-2024.</li>
+          <li>Industrial training at Koral Pharma, Nashik.</li>
+          <li>
+            Internship and certification program in Genetic Engineering for two
+            months.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="projects-section">
+      <h3>My Projects:</h3>
+      <div class="projects-container">
+          <div class="project-card">
+              <div class="project-info">
+                  <h3>Mini Project 1:</h3>
+                  <p>
+                    This mini-project comprises of small task which i have performed to gain the momemtum of HTML and CSS. The primary motive of this project is inclied towords practice.
+                  </p>
+                  <a href="/MiniProject.html" class="project-link">View Project</a>
+              </div>
+          </div>
+          <div class="project-card">
+              <div class="project-info">
+                  <h3>Mini Project 2:</h3>
+                  <p>
+                    This mini-project comprises of various buttons and there different CSS functions which can be used to visually appealing site or webpage.
+                  </p>
+                  <a href="/Miniproject2.html" class="project-link">View Project</a>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <section>
+      <h2 class="Certificate">Certificate Links:</h2>
+      <ul class="Certificate2">
+        <p>
+          <div class="a1a"><a href="/published work.pdf">Review Article</a></div>
+          <div class="b1b"><a href="/Industrial training.jpeg">Industrial Training @Koral Pharma</a></div>
+          <div class="c1c"><a href="/Presntation on Resarch Article.pdf">Presentation Skills</a></div>
+          <div class="d1d"><a href="/Intership Certificate.jpeg">Internship Program</a></div>
+        </p>
+      </ul>
+    </section>
+
+    <section>
+      <br>
+      <h2 class="Contact">Contact:</h2>
+      <input class="namebox" type="text" placeholder="Name">
+      <input class="emailbox" type="text" placeholder="Email" id="098">
+      <input class="messagebox" type="text" placeholder="Message" id="0987">
+      <button class="sendbutton">Send</button>
+  </section>
+
+  <p class="connect">
+    Or contact with me on
+    <a href="https://www.linkedin.com/in/shantanu-lade-3b3083310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
+  </p>
+  <!-- Jump to Top Button -->
+<a href="#" class="jump-to-top" id="jumpToTop" title="Back to top">&#8679;</a>
+
+  <div class="social-media gradient">
+    <h2>Connect with me:</h2>
+    <ul class="social-icons">
+      <li>
+        <a
+          href="https://www.instagram.com/shan.tanu.lade"
+          target="_blank"
+          aria-label="Instagram"
+          ><img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            alt="Instagram"
+        /></a>
+      </li>
+      <li>
+        <a
+          href="https://wa.me/8263931369"
+          target="_blank"
+          aria-label="WhatsApp"
+          ><img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
+        /></a>
+      </li>
+      <li>
+        <a
+          href="https://t.me/FIAyalda"
+          target="_blank"
+          aria-label="Telegram"
+          ><img
+            src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
+            alt="Telegram"
+        /></a>
+      </li>
+      <li>
+        <a
+          href="https://twitter.com/yourusername"
+          target="_blank"
+          aria-label="Twitter"
+          ><img
+            src="/xtweet.webp"
+            alt="Twitter"
+        /></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/shantanu-lade-3b3083310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="-blank"
+        aria-label="LinkedIn"><img src="/LinkedIN.jpg" alt="LinkedIn"></a>
+      </li>
+    </ul>
+  </div>
+  <footer>
+    <p>&copy; 2024 Shantanu Shantaram Lade</p>
+  </footer>
+  
+  <script>
+    // Show the button when the user scrolls down 100px from the top
+    window.onscroll = function() {
+        var jumpButton = document.getElementById("jumpToTop");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            jumpButton.classList.add("show");
+        } else {
+            jumpButton.classList.remove("show");
+        }
+    };
+</script>
+</body>
+</html>
